@@ -1,0 +1,4 @@
+set(['1', '0', '3', '2', '4', '6', '9'])
+[['369204', [u'returning', u'home', u'to', u'a', u'similar', u'service']], ['369201', [u'eye', u'your', u'friends', u'to', u'wonder', u'what']], ['369201', [u'is', u'wrong', u'you', u'to', u'hate', u'yourself']], ['369201', [u'when', u'we', u'were', u'to', u'wonder', u'how']], ['369202', [u'them', u'the', u'1990s', u'with', u'a', u'dramatic']], ['369203', [u'in', u'protest', u'he', u'a', u'hunger', u'strike']], ['369204', [u'very', u'successful', u'venture', u'in', u'1842', u'the']], ['369201', [u'where', u'to', u'start', u'at', u'the', u'beginning']], ['369202', [u'of', u'approach', u'this', u'with', u'the', u'figure']], ['369201', [u'of', u'the', u'figure', u'to', u'work', u'on']]]
+set([])
+[]

@@ -1,0 +1,83 @@
+Part A 
+===================================================================================================================
+Here are the baseline scores from running baseline.py:
+
+English baseline: 0.535
+Spanish baseline: 0.684
+Catalan baseline: 0.678
+
+
+Here are the scores using default classifier without any features:
+
+English SVC: 0.620
+English KNN: 0.557
+
+Spanish SVC: 0.788
+Spanish KNN: 0.690
+
+Catalan SVC: 0.823
+Catalan KNN: 0.713
+---------------------------------------------------------------------------------------------------------------------
+PART B
+====================================================================================================================
+Removing punctuation and 3 neighbouring words from left and right context and head: (also BEST SCORE OBTAINED)
+
+English: 0.656
+Spanish: 0.818
+Catalan: 0.831
+
+Relevancy and 3 neighbouring words from left and right context and head:
+
+English: 0.655
+Spanish: 0.752
+Catalan: 0.777
+
+POS_Tagging and surrounding words:
+
+English: 0.616
+
+Word synnset and 3 neighbouring words from left and right context and head:
+
+English: 0.654
+Spanish: 0.816
+Catalan: 0.828
+
+Relevancy feature alone:
+
+English: 0.541
+Spanish: 0.685
+Catalan: 0.687
+
+
+CONCLUSIONS:
+
+1. Using all the features did not help the improve the score rather brought the reference precision down towards the baseline precision. 
+This means that using complex features and a lot of features does not necessarily help improve the precision to disambiguate the senses of words for different languages.
+Sometimes very simple features like removing punctuations and taking surrounding words make a difference.
+
+2. One would expect that knowing the part of speech of the head and its surrounding words would help make sense of the language and its words better but the results from using 
+POS_tagging were surprising as it brought down the scores. This means that lexical context (surrounding words) is more helpful in WSD task over knowing the grammar.
+
+3. Knowing the synonyms along with the surrounding words gave better precisions but are slightly off from the precision obtained using the surrounding words. I think using synonyms with other 
+additional features might help improve the scores. But using synonyms alone did not do really well which leads me to believe that knowing synonyms is not as important as knowing your
+surrounding words. Knowing synonyms could be helpful in building IR systems while query expansion to get better search results.
+
+4. Knowing the relevance score, like synsets gave better score for English but again slightly off from the highest precision obtained but did not improve the precision for other languages.
+
+5. For me using 3 surrounding words on either side gave a good precision over 2 or 4 surrounding words. It means that too much context can sometimes ambiguate certain languages more.
+ 
+I think having different features for the nouns, verbs and other parts of speech separaetely might also help in diambiguating the word senses better.
+
+
+
+Why some laguages are easier than other languages for WSD Tasks?
+
+Some lanugages are easier to diambiguate than other languages like English becuase the vocabulary of some languages can be very ambiguous. 
+In English unlike in Catalan and Spanish, the words can be same and have different pos tagging or different meanings in different context. 
+Therefore, it is important to understand the context of the word in which it is used.
+Also, there are a lot of loose and overlapping word meaning in the English vocabulary.
+I think this is why knowing surrounding words helped in disambiguating the senses of words better.
+Also modern english has less inflection compared with many other languages and relies on auxiliary verbs  and work oder for the expression of complex tenses, aspect and mood. 
+Where as catalan and spanish have inflectional grammar where verbs are split in several paradigms and are inflected for person, number, tense, aspect, mood, and gender.
+
+
